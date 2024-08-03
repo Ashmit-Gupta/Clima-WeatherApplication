@@ -1,16 +1,14 @@
-# clima
+# Clima: Weather Application
 
-A new Flutter project.
+Clima is a weather application built with Flutter that leverages the OpenWeatherAPI to provide real-time weather updates. This app offers users an intuitive interface to check the current weather conditions and forecasts for their desired locations.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **Real-Time Weather Data**: Fetches up-to-date weather information from the OpenWeatherAPI.
+- **Search Functionality**: Allows users to search for weather data by city name.
+- **User-Friendly Interface**: Designed with a clean and responsive UI to enhance user experience.
 
-A few resources to get you started if this is your first Flutter project:
+## Technologies Used
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Flutter**: Framework for building the cross-platform mobile app.
+- **OpenWeatherAPI**: Provides weather data for the application.
