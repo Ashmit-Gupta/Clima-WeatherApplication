@@ -12,6 +12,7 @@ class LocationScreen extends StatefulWidget {
   _LocationScreenState createState() => _LocationScreenState();
 }
 
+//todo add the api key into the .gitignore!!
 class _LocationScreenState extends State<LocationScreen> {
   late String tempMsg;
   late String weatherIcon;
@@ -76,8 +77,8 @@ class _LocationScreenState extends State<LocationScreen> {
                     ),
                   ),
                   TextButton(
-                    onPressed: () {
-                      Navigator.push(
+                    onPressed: () async {
+                      var typedName = await Navigator.push(
                         context,
                         MaterialPageRoute(
                           builder: (context) {
@@ -85,6 +86,11 @@ class _LocationScreenState extends State<LocationScreen> {
                           },
                         ),
                       );
+                      print("the named typed is : $typedName");
+                      if (typedName != null) {
+                        // var weather.getCityWeather(typedName);
+                        updateUI(await weather.getCityWeather(typedName));
+                      }
                     },
                     child: Icon(
                       Icons.location_city,
