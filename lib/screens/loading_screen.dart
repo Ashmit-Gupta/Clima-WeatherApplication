@@ -21,6 +21,7 @@ class _LoadingScreenState extends State<LoadingScreen> {
   void initState() {
     // will be called once whenever your app is initialised ,
     super.initState();
+    getLocationData();
     // getLocationData();
   }
 
@@ -48,7 +49,7 @@ await
   void getLocationData() async {
     WeatherModel weatherModel = WeatherModel();
     var weatherData = await weatherModel.getLocationWeather();
-    Navigator.push(
+    Navigator.pushReplacement(
       context,
       MaterialPageRoute(
         builder: (context) {
@@ -60,7 +61,6 @@ await
 
   @override
   Widget build(BuildContext context) {
-    getLocationData();
     return Scaffold(
       body: Center(
         child: SpinKitPouringHourGlassRefined(
